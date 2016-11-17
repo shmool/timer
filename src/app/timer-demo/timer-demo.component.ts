@@ -4,12 +4,16 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-timer-demo',
   styleUrls: ['./timer-demo.component.css'],
   template: `
+  <div class="main">
     <app-timer [minutes]="time.minutes" [seconds]="time.seconds" (zero)="setZeroTime()"></app-timer>
+    <div class="settings">
     <div [hidden]="!setterAvailable">
       <a href="#" (click)="toggleSetter()">{{ setterOpen ? 'close' : 'open' }} time setter</a>
       <app-timer-setter [hidden]="!setterOpen" (setTime)="setNewTime($event)"></app-timer-setter>
     </div>
     <app-fireworks [hidden]="!showFireworks"></app-fireworks>
+    </div>
+    </div>
   `
 })
 export class TimerDemoComponent implements OnInit {
