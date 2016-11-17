@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+  text-align: center;
+}
+
+.timer-setter {
+  margin: 0 40px;
+}
+
+button {
+  font-size: 80px;
+  padding: 20px 30px;
+  margin: 30px 0;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+}
